@@ -142,6 +142,7 @@
                         </v-card-text>
                     </template>
                 </panel>
+                <heightmap-adjust-panel v-if="currentProfile"></heightmap-adjust-panel>
             </v-col>
             <v-col class="col-12 col-md-4">
                 <panel
@@ -390,6 +391,7 @@ import BaseMixin from '@/components/mixins/base'
 import ControlMixin from '@/components/mixins/control'
 
 import Panel from '@/components/ui/Panel.vue'
+import HeightmapAdjustPanel from '@/components/panels/HeightmapAdjustPanel.vue'
 import {
     mdiCloseThick,
     mdiDelete,
@@ -435,6 +437,7 @@ interface HeightmapSerie {
 @Component({
     components: {
         Panel,
+        HeightmapAdjustPanel,
     },
 })
 export default class PageHeightmap extends Mixins(BaseMixin, ControlMixin) {
